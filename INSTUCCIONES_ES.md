@@ -16,13 +16,13 @@ Puede ver el objeto completo en ```server / server.js``. La estructura de datos 
 
 ```JavaScript
 let jokes = [
-{
-whoseJoke: "Luke",
-jokeQuestion: "Two fish are in a tank. What did one fish say to the other?",
-punchLine: "Do you know how to drive this thing?"
-}
+  {
+    whoseJoke: "Luke",
+    jokeQuestion: "Two fish are in a tank. What did one fish say to the other?",
+    punchLine: "Do you know how to drive this thing?"
+  }
 ];
-``
+```
 
 Para empezar, 'Fork' esta repo y 'Clone' a su máquina.
 
