@@ -1,4 +1,4 @@
-## Nodo Express jQuery Código Desafío
+## Node Express jQuery Código Desafío
 
 ### Objetivo
 - Enviar solicitudes al servidor desde el cliente mediante una petición AJAX(s),
