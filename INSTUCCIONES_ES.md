@@ -24,7 +24,7 @@ let jokes = [
 ];
 ```
 
-Para empezar, 'Fork' esta repo y 'Clone' a su máquina.
+Para empezar, 'Fork' este repo y 'Clone' a su máquina.
 
 Descripción
 --------
