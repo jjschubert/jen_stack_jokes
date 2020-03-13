@@ -11,7 +11,7 @@ Su cliente le ha pedido que cree una aplicación se llama 'Joke Book'. El servid
 
 Su trabajo será construir el servidor alrededor de los datos en el `server / server.js` archivo, mostrar los chistes actuales al DOM, y añadir la capacidad para que los usuarios añadir sus propios chistes y mostrar estos también.
 
-##### Cómo se estructuran los datos de broma
+##### Cómo se estructuran los datos de chiste
 Puede ver el objeto completo en ```server / server.js```. La estructura de datos es una matriz de objetos. Estos objetos tienen tres propiedades: whichJoke, jokeQuestion y punchLine.
 
 ```JavaScript
