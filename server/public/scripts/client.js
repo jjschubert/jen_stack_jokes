@@ -4,7 +4,27 @@ $(document).ready(onReady);
 
 function onReady() {
     console.log('DOM ready');
+    $('#addJokeButton').on('click', submitJoke);
     getJokes();
+}
+
+function submitJoke() {
+    console.log('in submitJokes');
+    let newJoke = {
+        whoseJoke: $('#whoseJokeIn').val(),
+        jokeQuestion: $('#questionIn').val(),
+        punchLine: $('#punchlineIn').val(),
+    }
+    console.log(newJoke);
+
+    $.ajax({
+        method: 'POST',
+        url: '/jokes',
+        data: newJoke,
+    }).then(function (response) {
+        console.log(response);
+        getJokes();
+    })
 }
 
 function getJokes() {
@@ -12,12 +32,11 @@ function getJokes() {
         url: '/jokes',
         method: "GET"
     }).then(function (response) {
+        $('#displayJokes').empty();
         for (let i = 0; i < response.length; i++) {
-            let joke = response[i];
-            console.log(joke);
-            $('#displayJokes').empty();
+            console.log(response);
             $('#displayJokes').append(
-                `<li>${joke.jokeQuestion} ${joke.punchLine} - submitted by ${joke.whoseJoke}</li>`
+                `<li>${response[i].jokeQuestion} ${response[i].punchLine} - submitted by ${response[i].whoseJoke}</li>`
             );
         }
     }
