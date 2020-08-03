@@ -1,6 +1,6 @@
-const express = require( 'express' );
+const express = require('express');
 const app = express();
-const bodyParser = require( 'body-parser' );
+const bodyParser = require('body-parser');
 const PORT = 5000;
 
 // use bodyParser.urlencoded throughout the app with this:
@@ -37,7 +37,7 @@ let jokes = [
 // serve back static files
 app.use(express.static('server/public'));
 
-app.get('/jokes', function (req,res) {
+app.get('/jokes', function (req, res) {
   console.log('in get /jokes');
   res.send(jokes);
 })
