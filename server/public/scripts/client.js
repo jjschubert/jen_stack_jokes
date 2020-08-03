@@ -32,11 +32,12 @@ function getJokes() {
         url: '/jokes',
         method: "GET"
     }).then(function (response) {
-        $('#displayJokes').empty();
+        $('#outputDiv').empty();
         for (let i = 0; i < response.length; i++) {
             console.log(response);
-            $('#displayJokes').append(
-                `<li>${response[i].jokeQuestion} ${response[i].punchLine} - submitted by ${response[i].whoseJoke}</li>`
+            $('#outputDiv').append(
+                `<p class='joke'>${response[i].jokeQuestion} ${response[i].punchLine} </p>
+                <p class="author">- submitted by ${response[i].whoseJoke}</p>`
             );
         }
     }
